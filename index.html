@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,11 +10,21 @@
       <title>microrb.com</title>
       <link href="./assets/bootstrap.min.css" rel="stylesheet">
       <style type="text/css">
+        html { position: relative; min-height: 100%; }
+        body { margin-bottom: 60px; }
         .search { width: 100%; margin: 0 auto; display: block; }
         .filter a { outline: none; text-decoration: none; }
         .filter .label { display: inline-block; margin: 8px 0 0 5px; }
         .list { width: 75%; margin: 0 auto; }
-        footer { text-align: center; padding: 20px 0; border-top: 1px solid gray; }
+        footer {
+          text-align: center;
+          padding: 20px 0;
+          border-top: 1px solid gray;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 60px;
+        }
         .badges { text-align: left; list-style: none; float: right; }
         .badges li { color: white; display: inline; padding-right: 5px; }
         .badge-dark { background-color: #32373B }
@@ -27,597 +38,1963 @@
               <small>awesome ruby libraries!</small>
             </h1>
           </header>
-          <section id="projects">
-            <form id="search" class="form-inline" method="get">
-              <fieldset>
-                <input class="search input-lg" placeholder="search..."/>
-              </fieldset>
-            </form>
-            <br/>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <div class="panel-title">
-                  Filter by tag
-                </div>
-              </div>
-              <div class="panel-body filter">
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#ast">ast</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#attributes">attributes</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#coercion">coercion</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#database">database</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#delegation">delegation</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#key-value">key-value</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#mapper">mapper</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#state-machine">state-machine</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#template">template</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#testing">testing</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#utils">utils</a>
-                  </span>
-                  <span class="label label-default">
-                    <a class="tag-filter" href="#web">web</a>
-                  </span>
-              </div>
-            </div>
-            <br/>
-            <ul class="list list-unstyled">
-              <li data-tags="utils">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/dkubb/abstract_type/stargazers">
-                          <span class="badge badge-dark"> 11 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/dkubb/abstract_type/network">
-                          <span class="badge badge-dark"> 3 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/dkubb/abstract_type">abstract_type</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">utils</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="attributes">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/mbj/anima/stargazers">
-                          <span class="badge badge-dark"> 13 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/mbj/anima/network">
-                          <span class="badge badge-dark"> 1 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/mbj/anima">anima</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Read  only attributes initialized from attributes hash
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">attributes</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="utils ast">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/whitequark/ast/stargazers">
-                          <span class="badge badge-dark"> 14 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/whitequark/ast/network">
-                          <span class="badge badge-dark"> 0 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/whitequark/ast">ast</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      A library for working with Abstract Syntax Trees.
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">utils</span>
-                      <span class="label label-primary">ast</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="delegation">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/solnic/charlatan/stargazers">
-                          <span class="badge badge-dark"> 30 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/solnic/charlatan/network">
-                          <span class="badge badge-dark"> 1 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/solnic/charlatan">charlatan</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Neat delegation for ruby objects
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">delegation</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="coercion">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/solnic/coercible/stargazers">
-                          <span class="badge badge-dark"> 84 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/solnic/coercible/network">
-                          <span class="badge badge-dark"> 7 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/solnic/coercible">coercible</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Powerful, flexible and configurable coercion library. And nothing more.
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">coercion</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="web">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/soveran/cuba/stargazers">
-                          <span class="badge badge-dark"> 537 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/soveran/cuba/network">
-                          <span class="badge badge-dark"> 56 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/soveran/cuba">cuba</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Rum based microframework for web development.
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">web</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="utils">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/dkubb/equalizer/stargazers">
-                          <span class="badge badge-dark"> 53 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/dkubb/equalizer/network">
-                          <span class="badge badge-dark"> 3 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/dkubb/equalizer">equalizer</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Define equality, equivalency and hash methods automatically
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">utils</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="web">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/patriciomacadden/hobbit/stargazers">
-                          <span class="badge badge-dark"> 147 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/patriciomacadden/hobbit/network">
-                          <span class="badge badge-dark"> 10 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/patriciomacadden/hobbit">hobbit</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      A minimalistic microframework built on top of Rack.
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">web</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="state-machine">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/soveran/micromachine/stargazers">
-                          <span class="badge badge-dark"> 204 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/soveran/micromachine/network">
-                          <span class="badge badge-dark"> 16 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/soveran/micromachine">micromachine</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Minimal Finite State Machine
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">state-machine</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="testing">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/frodsan/mocoso/stargazers">
-                          <span class="badge badge-dark"> 9 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/frodsan/mocoso/network">
-                          <span class="badge badge-dark"> 2 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/frodsan/mocoso">mocoso</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Another stub & mock library
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">testing</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="mapper ast">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/mbj/morpher/stargazers">
-                          <span class="badge badge-dark"> 35 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/mbj/morpher/network">
-                          <span class="badge badge-dark"> 2 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/mbj/morpher">morpher</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Predicates / (bijective-)transformation of ruby datastructures with optionally traced evaluation
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">mapper</span>
-                      <span class="label label-primary">ast</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="template">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/soveran/mote/stargazers">
-                          <span class="badge badge-dark"> 36 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/soveran/mote/network">
-                          <span class="badge badge-dark"> 5 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/soveran/mote">mote</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Minimum Operational Template
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">template</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/soveran/nest/stargazers">
-                          <span class="badge badge-dark"> 129 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/soveran/nest/network">
-                          <span class="badge badge-dark"> 16 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/soveran/nest">nest</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Generate nested namespaced keys for key-value databases.
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                  </div>
-                </div>
-              </li>
-              <li data-tags="key-value database">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/soveran/ohm/stargazers">
-                          <span class="badge badge-dark"> 749 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/soveran/ohm/network">
-                          <span class="badge badge-dark"> 94 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/soveran/ohm">ohm</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Object-Hash Mapping for Redis
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">key-value</span>
-                      <span class="label label-primary">database</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="web">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/sinatra/sinatra/stargazers">
-                          <span class="badge badge-dark"> 5690 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/sinatra/sinatra/network">
-                          <span class="badge badge-dark"> 880 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/sinatra/sinatra">sinatra</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Classy web-development dressed in a DSL (official / canonical repo)
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">web</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="ast">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/mbj/unparser/stargazers">
-                          <span class="badge badge-dark"> 34 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/mbj/unparser/network">
-                          <span class="badge badge-dark"> 7 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/mbj/unparser">unparser</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Unparse ruby ASTs from whitequark/parser into equivalent ruby source
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">ast</span>
-                  </div>
-                </div>
-              </li>
-              <li data-tags="attributes coercion">
-                <div class="panel panel-primary">
-                  <div class="panel-heading">
-                    <ul class="badges">
-                      <li>
-                        <a href="https://github.com/solnic/virtus/stargazers">
-                          <span class="badge badge-dark"> 1732 </span>
-                          stars
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/solnic/virtus/network">
-                          <span class="badge badge-dark"> 107 </span>
-                          forks
-                        </a>
-                      </li>
-                    </ul>
-                    <h3 class="panel-title">
-                      <a class="name" href="https://github.com/solnic/virtus">virtus</a>
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    <div class="description">
-                      Attributes on Steroids for Plain Old Ruby Objects
-                    </div>
-                  </div>
-                  <div class="panel-footer">
-                      <span class="label label-primary">attributes</span>
-                      <span class="label label-primary">coercion</span>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section>
+<section id="projects">
+  <form id="search" class="form-inline" method="get">
+    <fieldset>
+      <input class="search input-lg" placeholder="search..."/>
+    </fieldset>
+  </form>
+  <br/>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        Filter by tag
+      </div>
+    </div>
+    <div class="panel-body filter">
+        <span class="label label-default">
+          <a class="tag-filter" href="#ansi">ansi</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#aop">aop</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#api">api</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#assets">assets</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#ast">ast</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#attributes">attributes</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#coercion">coercion</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#data">data</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#database">database</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#decorator">decorator</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#delegation">delegation</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#dom">dom</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#dsl">dsl</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#enumerable">enumerable</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#events">events</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#exceptions">exceptions</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#facades">facades</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#framework">framework</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#functional">functional</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#html">html</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#http">http</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#immutability">immutability</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#inflection">inflection</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#key-value">key-value</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#language">language</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#mapper">mapper</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#memoization">memoization</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#method-object">method-object</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#mocks">mocks</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#parsing">parsing</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#query">query</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#quickcheck">quickcheck</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#rack">rack</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#sanitization">sanitization</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#serializer">serializer</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#state-machine">state-machine</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#support">support</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#template">template</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#terminal">terminal</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#testing">testing</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#utils">utils</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#values">values</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#web">web</a>
+        </span>
+        <span class="label label-default">
+          <a class="tag-filter" href="#yml">yml</a>
+        </span>
+    </div>
+  </div>
+  <br/>
+  <ul class="list list-unstyled">
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/dkubb/abstract_type/stargazers">
+                <span class="badge badge-dark"> 24 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/dkubb/abstract_type/network">
+                <span class="badge badge-dark"> 4 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/dkubb/abstract_type">abstract_type</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="immutability">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/dkubb/adamantium/stargazers">
+                <span class="badge badge-dark"> 193 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/dkubb/adamantium/network">
+                <span class="badge badge-dark"> 6 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/dkubb/adamantium">adamantium</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Create immutable objects
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">immutability</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils aop">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/PragTob/after_do/stargazers">
+                <span class="badge badge-dark"> 49 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/PragTob/after_do/network">
+                <span class="badge badge-dark"> 4 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/PragTob/after_do">after_do</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            after_do allows you to add simple callbacks to methods
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+            <span class="label label-primary">aop</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="attributes">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/mbj/anima/stargazers">
+                <span class="badge badge-dark"> 47 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mbj/anima/network">
+                <span class="badge badge-dark"> 5 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/mbj/anima">anima</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Object initializer from attributes hash
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">attributes</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="web assets">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/plexus/asset_packer/stargazers">
+                <span class="badge badge-dark"> 6 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/plexus/asset_packer/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/plexus/asset_packer">asset_packer</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">web</span>
+            <span class="label label-primary">assets</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils ast">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/whitequark/ast/stargazers">
+                <span class="badge badge-dark"> 27 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/whitequark/ast/network">
+                <span class="badge badge-dark"> 3 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/whitequark/ast">ast</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            A library for working with Abstract Syntax Trees.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+            <span class="label label-primary">ast</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="delegation">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/solnic/charlatan/stargazers">
+                <span class="badge badge-dark"> 46 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/solnic/charlatan/network">
+                <span class="badge badge-dark"> 3 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/solnic/charlatan">charlatan</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Neat delegation for ruby objects
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">delegation</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/janlelis/clipboard/stargazers">
+                <span class="badge badge-dark"> 117 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/janlelis/clipboard/network">
+                <span class="badge badge-dark"> 17 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/janlelis/clipboard">clipboard</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Ruby access to the clipboard on Linux, MacOS and Windows
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="coercion">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/solnic/coercible/stargazers">
+                <span class="badge badge-dark"> 100 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/solnic/coercible/network">
+                <span class="badge badge-dark"> 9 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/solnic/coercible">coercible</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Powerful, flexible and configurable coercion library. And nothing more.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">coercion</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/mbj/concord/stargazers">
+                <span class="badge badge-dark"> 26 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mbj/concord/network">
+                <span class="badge badge-dark"> 2 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/mbj/concord">concord</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Mixin to ease compositions under ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="http">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/snusnu/cookie/stargazers">
+                <span class="badge badge-dark"> 3 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/snusnu/cookie/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/snusnu/cookie">cookie</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            An HTTP Cookie implemented in ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">http</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="web framework">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/soveran/cuba/stargazers">
+                <span class="badge badge-dark"> 743 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/soveran/cuba/network">
+                <span class="badge badge-dark"> 76 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/soveran/cuba">cuba</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Rum based microframework for web development.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">web</span>
+            <span class="label label-primary">framework</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/eval/envied/stargazers">
+                <span class="badge badge-dark"> 167 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/eval/envied/network">
+                <span class="badge badge-dark"> 6 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/eval/envied">envied</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Ensures presence and type of your app's ENV-variables
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/dkubb/equalizer/stargazers">
+                <span class="badge badge-dark"> 101 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/dkubb/equalizer/network">
+                <span class="badge badge-dark"> 5 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/dkubb/equalizer">equalizer</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Define equality, equivalency and hash methods automatically
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="testing">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/myobie/factories/stargazers">
+                <span class="badge badge-dark"> 1 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/myobie/factories/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/myobie/factories">factories</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            The simplest factories implimentation that works.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">testing</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="data functional">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/plexus/fzip/stargazers">
+                <span class="badge badge-dark"> 2 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/plexus/fzip/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/plexus/fzip">fzip</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">data</span>
+            <span class="label label-primary">functional</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="html sanitization">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/frodsan/hache/stargazers">
+                <span class="badge badge-dark"> 1 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/frodsan/hache/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/frodsan/hache">hache</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Escapes HTML tag characters (&, <>, ", ', /).
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">html</span>
+            <span class="label label-primary">sanitization</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="web dom ast">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/plexus/hexp/stargazers">
+                <span class="badge badge-dark"> 48 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/plexus/hexp/network">
+                <span class="badge badge-dark"> 4 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/plexus/hexp">hexp</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Ruby virtual DOM for HTML
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">web</span>
+            <span class="label label-primary">dom</span>
+            <span class="label label-primary">ast</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="web framework">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/patriciomacadden/hobbit/stargazers">
+                <span class="badge badge-dark"> 200 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/patriciomacadden/hobbit/network">
+                <span class="badge badge-dark"> 14 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/patriciomacadden/hobbit">hobbit</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            A minimalistic microframework built on top of Rack.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">web</span>
+            <span class="label label-primary">framework</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="inflection">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/mbj/inflecto/stargazers">
+                <span class="badge badge-dark"> 20 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mbj/inflecto/network">
+                <span class="badge badge-dark"> 4 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/mbj/inflecto">inflecto</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Inflector for ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">inflection</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="facades">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/ahawkins/interchange/stargazers">
+                <span class="badge badge-dark"> 12 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ahawkins/interchange/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/ahawkins/interchange">interchange</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Facades around interchangeable objects & system boundaries
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">facades</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="web framework api">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/godfat/jellyfish/stargazers">
+                <span class="badge badge-dark"> 34 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/godfat/jellyfish/network">
+                <span class="badge badge-dark"> 2 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/godfat/jellyfish">jellyfish</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Pico web framework for building API-centric web applications
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">web</span>
+            <span class="label label-primary">framework</span>
+            <span class="label label-primary">api</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils serializer">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/frodsan/json-serializer/stargazers">
+                <span class="badge badge-dark"> 3 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/frodsan/json-serializer/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/frodsan/json-serializer">json-serializer</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Customize JSON ouput through serializer objects.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+            <span class="label label-primary">serializer</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="attributes">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/ahawkins/lift/stargazers">
+                <span class="badge badge-dark"> 4 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ahawkins/lift/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/ahawkins/lift">lift</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Hash + Block initialization for Ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">attributes</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="enumerable support">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/snusnu/lupo/stargazers">
+                <span class="badge badge-dark"> 10 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/snusnu/lupo/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/snusnu/lupo">lupo</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Includes Enumerable and provides an #each method for ruby objects
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">enumerable</span>
+            <span class="label label-primary">support</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/myobie/mashed/stargazers">
+                <span class="badge badge-dark"> 0 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/myobie/mashed/network">
+                <span class="badge badge-dark"> 2 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/myobie/mashed">mashed</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="memoization utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/rhysd/memo/stargazers">
+                <span class="badge badge-dark"> 1 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/rhysd/memo/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/rhysd/memo">memo</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            define memoized procedure easily in Ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">memoization</span>
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="state-machine">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/soveran/micromachine/stargazers">
+                <span class="badge badge-dark"> 242 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/soveran/micromachine/network">
+                <span class="badge badge-dark"> 22 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/soveran/micromachine">micromachine</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Minimal Finite State Machine
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">state-machine</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="testing">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/frodsan/mocoso/stargazers">
+                <span class="badge badge-dark"> 15 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/frodsan/mocoso/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/frodsan/mocoso">mocoso</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Another stub & mock library
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">testing</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="mapper ast">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/mbj/morpher/stargazers">
+                <span class="badge badge-dark"> 45 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mbj/morpher/network">
+                <span class="badge badge-dark"> 6 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/mbj/morpher">morpher</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Predicates / (bijective-)transformation of ruby datastructures with optionally traced evaluation
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">mapper</span>
+            <span class="label label-primary">ast</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="template">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/soveran/mote/stargazers">
+                <span class="badge badge-dark"> 48 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/soveran/mote/network">
+                <span class="badge badge-dark"> 7 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/soveran/mote">mote</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Minimum Operational Template
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">template</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="testing mocks">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/godfat/muack/stargazers">
+                <span class="badge badge-dark"> 9 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/godfat/muack/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/godfat/muack">muack</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Muack -- Yet Another Mocking Library
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">testing</span>
+            <span class="label label-primary">mocks</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="web">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/guilleiguaran/nancy/stargazers">
+                <span class="badge badge-dark"> 45 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/guilleiguaran/nancy/network">
+                <span class="badge badge-dark"> 4 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/guilleiguaran/nancy">nancy</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Minimal Ruby microframework for web development inspired in Sinatra and Cuba.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">web</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/soveran/nest/stargazers">
+                <span class="badge badge-dark"> 150 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/soveran/nest/network">
+                <span class="badge badge-dark"> 17 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/soveran/nest">nest</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Generate nested namespaced keys for key-value databases.
+          </div>
+        </div>
+        <div class="panel-footer">
+        </div>
+      </div>
+    </li>
+    <li data-tags="key-value database">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/soveran/ohm/stargazers">
+                <span class="badge badge-dark"> 878 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/soveran/ohm/network">
+                <span class="badge badge-dark"> 111 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/soveran/ohm">ohm</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Object-Hash Mapping for Redis
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">key-value</span>
+            <span class="label label-primary">database</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils terminal ansi">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/janlelis/paint/stargazers">
+                <span class="badge badge-dark"> 154 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/janlelis/paint/network">
+                <span class="badge badge-dark"> 7 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/janlelis/paint">paint</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Ruby library for terminal coloring / no string extensions / supports effects and 256 colors
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+            <span class="label label-primary">terminal</span>
+            <span class="label label-primary">ansi</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="memoization utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/ElMassimo/pakiderm/stargazers">
+                <span class="badge badge-dark"> 0 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ElMassimo/pakiderm/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/ElMassimo/pakiderm">pakiderm</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Pakiderm will never forget the return value.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">memoization</span>
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/floere/phony/stargazers">
+                <span class="badge badge-dark"> 397 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/floere/phony/network">
+                <span class="badge badge-dark"> 78 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/floere/phony">phony</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            E164 international phone number normalizing, splitting, formatting. 
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="method-object support">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/snusnu/procto/stargazers">
+                <span class="badge badge-dark"> 14 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/snusnu/procto/network">
+                <span class="badge badge-dark"> 2 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/snusnu/procto">procto</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Turns your ruby object into a method object
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">method-object</span>
+            <span class="label label-primary">support</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils parsing yml">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/Asquera/psych-inherit-file/stargazers">
+                <span class="badge badge-dark"> 2 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Asquera/psych-inherit-file/network">
+                <span class="badge badge-dark"> 2 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/Asquera/psych-inherit-file">psych-inherit-file</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            A YAML handler for psych that allows to inherit from shared files
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+            <span class="label label-primary">parsing</span>
+            <span class="label label-primary">yml</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="database query dsl">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/ElMassimo/queryable/stargazers">
+                <span class="badge badge-dark"> 12 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ElMassimo/queryable/network">
+                <span class="badge badge-dark"> 2 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/ElMassimo/queryable">queryable</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Queryable is a module that encapsulates query building so you don't have to tuck scopes inside your models.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">database</span>
+            <span class="label label-primary">query</span>
+            <span class="label label-primary">dsl</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/restorando/rbrules/stargazers">
+                <span class="badge badge-dark"> 9 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/restorando/rbrules/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/restorando/rbrules">rbrules</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Declare rule sets to check your objects against them later
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="serializer decorator">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/myobie/rep/stargazers">
+                <span class="badge badge-dark"> 1 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/myobie/rep/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/myobie/rep">rep</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            A library for writing representations of objects for pages and json apis.
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">serializer</span>
+            <span class="label label-primary">decorator</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/filib/ribimaybe/stargazers">
+                <span class="badge badge-dark"> 25 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/filib/ribimaybe/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/filib/ribimaybe">ribimaybe</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Maybe Functor, Applicative and Monad
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/janlelis/ruby_engine/stargazers">
+                <span class="badge badge-dark"> 1 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/janlelis/ruby_engine/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/janlelis/ruby_engine">ruby_engine</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            RubyEngine | Better than RUBY_ENGINE
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="utils">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/janlelis/ruby_version/stargazers">
+                <span class="badge badge-dark"> 2 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/janlelis/ruby_version/network">
+                <span class="badge badge-dark"> 1 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/janlelis/ruby_version">ruby_version</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            RubyVersion | Better than RUBY_VERSION
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">utils</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="testing quickcheck">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/godfat/rubyqc/stargazers">
+                <span class="badge badge-dark"> 14 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/godfat/rubyqc/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/godfat/rubyqc">rubyqc</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            RubyQC -- A conceptual QuickCheck library for Ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">testing</span>
+            <span class="label label-primary">quickcheck</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="web framework">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/sinatra/sinatra/stargazers">
+                <span class="badge badge-dark"> 6491 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sinatra/sinatra/network">
+                <span class="badge badge-dark"> 1015 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/sinatra/sinatra">sinatra</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Classy web-development dressed in a DSL (official / canonical repo)
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">web</span>
+            <span class="label label-primary">framework</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="framework">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/snusnu/substation/stargazers">
+                <span class="badge badge-dark"> 24 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/snusnu/substation/network">
+                <span class="badge badge-dark"> 3 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/snusnu/substation">substation</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Implement application boundary interfaces with a chain of responsibility
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">framework</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="framework web rack">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/snusnu/subway/stargazers">
+                <span class="badge badge-dark"> 4 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/snusnu/subway/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/snusnu/subway">subway</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            substation on rack
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">framework</span>
+            <span class="label label-primary">web</span>
+            <span class="label label-primary">rack</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="language">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/plexus/ting/stargazers">
+                <span class="badge badge-dark"> 28 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/plexus/ting/network">
+                <span class="badge badge-dark"> 4 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/plexus/ting">ting</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Parse/Generate pinyin, bopomofo, wade-giles and more using Ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">language</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="exceptions">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/ahawkins/tnt/stargazers">
+                <span class="badge badge-dark"> 9 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/ahawkins/tnt/network">
+                <span class="badge badge-dark"> 2 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/ahawkins/tnt">tnt</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Make understandable and actionable error classes easily
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">exceptions</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="ast">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/mbj/unparser/stargazers">
+                <span class="badge badge-dark"> 59 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mbj/unparser/network">
+                <span class="badge badge-dark"> 10 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/mbj/unparser">unparser</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Unparse ruby ASTs from whitequark/parser into equivalent ruby source
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">ast</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="attributes data">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/janlelis/value_struct/stargazers">
+                <span class="badge badge-dark"> 16 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/janlelis/value_struct/network">
+                <span class="badge badge-dark"> 0 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/janlelis/value_struct">value_struct</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Read-only structs in Ruby
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">attributes</span>
+            <span class="label label-primary">data</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="values attributes immutability">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/tcrayford/Values/stargazers">
+                <span class="badge badge-dark"> 197 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/tcrayford/Values/network">
+                <span class="badge badge-dark"> 19 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/tcrayford/Values">values</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Simple immutable value objects for ruby (the readme is longer than the code)
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">values</span>
+            <span class="label label-primary">attributes</span>
+            <span class="label label-primary">immutability</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="attributes coercion">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/solnic/virtus/stargazers">
+                <span class="badge badge-dark"> 2176 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/solnic/virtus/network">
+                <span class="badge badge-dark"> 154 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/solnic/virtus">virtus</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            Attributes on Steroids for Plain Old Ruby Objects
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">attributes</span>
+            <span class="label label-primary">coercion</span>
+        </div>
+      </div>
+    </li>
+    <li data-tags="events">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <ul class="badges">
+            <li>
+              <a href="https://github.com/krisleech/wisper/stargazers">
+                <span class="badge badge-dark"> 921 </span>
+                stars
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/krisleech/wisper/network">
+                <span class="badge badge-dark"> 39 </span>
+                forks
+              </a>
+            </li>
+          </ul>
+          <h3 class="panel-title">
+            <a class="name" href="https://github.com/krisleech/wisper">wisper</a>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="description">
+            A micro library providing Ruby objects with Publish-Subscribe capabilities
+          </div>
+        </div>
+        <div class="panel-footer">
+            <span class="label label-primary">events</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
         </div>
 
         <footer>
           <div class="container">
-            &copy; 2014 <a href="/">microrb.com</a> | <a href="https://github.com/microrb/microrb.com/wiki">what is this?</a>
+            &copy; 2014 <a href="/">microrb.com</a> | <a href="/about.html">what is this?</a>
           </div>
         </footer>
 
@@ -626,3 +2003,4 @@
         <script type="text/javascript" src="./assets/app.js"></script>
     </body>
 </html>
+
